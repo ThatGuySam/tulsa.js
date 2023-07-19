@@ -18,34 +18,35 @@
       background: #020202;
       cursor: crosshair;
     }
-    canvas{ display:block }
-    h1 {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-      font-family: "Source Sans Pro";
-      font-size: 5em;
-      font-weight: 900;
-      -webkit-user-select: none;
-      user-select: none;
-    }
   </style>
 
 </head>
 <body 
-  class="p-0"
+  class="p-0 flex flex-col items-center justify-around min-h-screen text-center font-mono text-gray-200"
 >
-  <h1>Tulsa.js</h1>
-  <main class="text-zinc-200">
+  <canvas 
+    id="birthday"
+    class="absolute inset-0 w-full h-full"
+  ></canvas>
+
+  <header class="relative"></header>
+  <main class="relative flex flex-col gap-3">
+    <h1 class="text-6xl font-black">Tulsa.js</h1>
     <h2>Tulsa's JavaScript Meetup Group</h2>
     <div>
       <a href="https://www.meetup.com/tulsajs/" class="underline">View on Meetup</a>
     </div>
   </main>
-  <canvas id="birthday"></canvas>
-
+  <footer class="relative">
+      <div>
+        Groups we love
+      </div>
+      <div>
+        <a href="https://tulsaux.com/" class="underline">Tulsa UX</a>
+        <a href="https://www.meetup.com/tulsa-web-devs/" class="underline">Tulsa WebDevs</a>
+        <a href="https://www.meetup.com/pro/techlahoma/" class="underline">Techlahoma</a>
+      </div>
+  </footer>
 <script>
 
   // helper functions
